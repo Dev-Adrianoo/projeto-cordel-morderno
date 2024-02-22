@@ -1,4 +1,4 @@
-@charset 'UTF-8';
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
@@ -6,54 +6,74 @@
 :root {
     --fonte-principal: "Passion One", sans-serif;
     --fonte-secundaria:  "Sriracha", cursive;
-    --fonter-terciaria: "Verdana", Geneva, Tahoma, sans-serif;
-
+    --fonte-terciaria: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 * {
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
+}
+
+html , body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte-terciaria);
 }
 
 header {
     background-color: black;
     color: white;
-    height: 155px;
     text-align: center;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.27);
 }
 
+
 header > h1 {
+    font-variant: small-caps;
     padding-top: 50px;
     font-family: var(--fonte-principal);
-    font-weight: normal;
-    font-size: 60px;
-    text-align: center;
+    font-size: 10vw;
 }
 
 header > p {
-    padding-bottom: 70px;
+    padding-bottom: 50px;
 }
 
-article > a {
+a {
     text-decoration: none;
     color: white;
-    font-weight: bolder;
 }
- 
+
+header a:hover , footer a:hover {
+    text-decoration: underline;
+    color: white;
+}
 
 section {
     font-family: var(--fonte-secundaria);
-    line-height: 2em;
     font-size: 3.5vw;
     padding-top: 10vh;
     padding-bottom: 10vh;
-    line-height: 2em;
+    line-height: 1.5em;
     padding-left: 30px;
 }
 
-.primeira-frase {
-    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.064);
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgba(0, 0, 0, 0.378);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.216);
+}
+
+section.imagem > p {
+    padding: 5px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.346);
+    border-radius: 3px;
+    text-shadow: 2px 2px 0px black;
 }
 
 footer {
@@ -61,4 +81,13 @@ footer {
     background-color: black;
     text-align: center;
     padding: 10px;
+    font-weight: bold;
+}
+
+#img1 {
+    background: white url("/imagens/joaninha.g.jpg") center center /cover no-repeat fixed;
+}
+
+#img2 {
+    background: darkgray url("/imagens/papel.g.jpg") right bottom / cover no-repeat fixed; 
 }
